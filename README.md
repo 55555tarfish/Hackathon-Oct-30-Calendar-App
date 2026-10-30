@@ -1,4 +1,4 @@
-# DayPlan - Daily Schedule & Calendar App
+# Create Your Day - Daily Schedule & Calendar App
 
 A modern, responsive daily scheduling and calendar web application designed to help you organize what you need to get done every day, stay focused with time-blocking, track recurring habits, and maintain productive streaks.
 
