@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --color-dark-brown: #3b1d11;
+    --color-dark-brown-muted: #5c2e1b;
+    --color-dark-brown-border: #542a18;
+    --color-peach-50: #fff7f2;
+    --color-peach-100: #ffe8db;
+    --color-peach-200: #fed2bd;
+    --color-peach-300: #fcbd9d;
+    --color-peach-400: #f8a176;
+    --color-peach-500: #f1804b;
+    --color-peach-600: #e0652d;
+    --color-peach-700: #be4d1c;
+    --color-peach-800: #5c2e1b;
+    --color-peach-900: #3b1d11;
+    --color-peach-950: #2d0e01;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: linear-gradient(180deg, #fff7f2 0%, #fedcc9 40%, #fdbb9b 75%, #f9986d 100%) fixed;
+    color: #3b1d11;
+    min-height: 100vh;
+  }
+
+  /* Warm gradient utility: light at the top, gentle warm peach at the bottom */
+  .bg-warm-gradient {
+    background: linear-gradient(180deg, #fff7f2 0%, #fedcc9 40%, #fdbb9b 75%, #f9986d 100%);
+    background-attachment: fixed;
+    color: #3b1d11;
+  }
+
+  /* Ensure all inputs and textareas default to crisp black text on white backgrounds */
+  input, textarea, select {
+    color: #000000 !important;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: #5c2e1b !important;
+    opacity: 0.65;
+  }
+}
+
+/* Bulletproof utility classes for peach styling & dark brown text on peach backgrounds */
+.bg-peach-50 { background-color: #fff7f2 !important; color: #3b1d11; }
+.bg-peach-100 { background-color: #ffe8db !important; color: #3b1d11; }
+.bg-peach-200 { background-color: #fed2bd !important; color: #3b1d11; }
+.bg-peach-300 { background-color: #fcbd9d !important; color: #3b1d11; }
+.bg-peach-400 { background-color: #f8a176 !important; }
+.bg-peach-500 { background-color: #f1804b !important; }
+.bg-peach-600 { background-color: #e0652d !important; }
+.bg-peach-700 { background-color: #be4d1c !important; }
+.bg-peach-800 { background-color: #5c2e1b !important; }
+.bg-peach-900 { background-color: #3b1d11 !important; }
+
+/* Slightly lightened dark brown rectangle borders */
+.border-dark-brown { border-color: #542a18 !important; }
+.border-peach-200 { border-color: #542a18 !important; }
+.border-peach-300 { border-color: #542a18 !important; }
+.border-peach-400 { border-color: #542a18 !important; }
+.border-peach-500 { border-color: #542a18 !important; }
+.border-peach-600 { border-color: #542a18 !important; }
+.border-peach-700 { border-color: #542a18 !important; }
+.border-peach-800 { border-color: #542a18 !important; }
+.border-peach-950 { border-color: #542a18 !important; }
+
+.divide-peach-300 > :not([hidden]) ~ :not([hidden]),
+.divide-dark-brown > :not([hidden]) ~ :not([hidden]) {
+  border-color: #542a18 !important;
+}
+
+.ring-dark-brown { --tw-ring-color: #542a18 !important; }
+.ring-peach-500 { --tw-ring-color: #542a18 !important; }
+
+.bg-dark-brown-border { background-color: #542a18 !important; }
+
+/* Dark brown text utilities */
+.text-dark-brown { color: #3b1d11 !important; }
+.text-dark-brown-muted { color: #5c2e1b !important; }
+.text-peach-700 { color: #be4d1c !important; }
+.text-peach-800 { color: #5c2e1b !important; }
+.text-peach-900 { color: #3b1d11 !important; }
+.text-peach-950 { color: #2d0e01 !important; }
+
+/* Custom modern scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.7);
+}
+
+/* Smooth transitions */
+.transition-card {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Grid line styling */
+.timeline-grid {
+  background-size: 100% 64px;
+  background-image: linear-gradient(to bottom, rgba(226, 232, 240, 0.7) 1px, transparent 1px);
+}
